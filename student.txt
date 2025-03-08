@@ -1,0 +1,37 @@
+=== STUDENT RECORDS SYSTEM ===
+Total Students: 2
+
+--- Student 1 ---
+Roll Number: 2
+Name: sujan
+Age: 20
+Address: RAMPUR 10 PALPA
+
+Subject Marks:
+C Programming: 0.00
+Web: 0.00
+PC Troubleshoot: 0.00
+Math: 0.00
+Electrical: 0.00
+
+Total Marks: 0.00/500
+Percentage: 0.00%
+------------------------
+
+--- Student 2 ---
+Roll Number: 2
+Name: Sujan
+Age: 17
+Address: Rampur 10 palpa
+
+Subject Marks:
+C Programming: 100.00
+Web: 100.00
+PC Troubleshoot: 100.00
+Math: 100.00
+Electrical: 100.00
+
+Total Marks: 500.00/500
+Percentage: 100.00%
+------------------------
+
