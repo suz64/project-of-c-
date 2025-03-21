@@ -12,13 +12,12 @@ typedef struct {
     char name[50];
     int age;
     char address[100];
-  
 } Student;
 
 // This function saves all student information to a file
 void saveToFile(Student students[], int count) {
     // Try to open the file
-    FILE *file = fopen(FILE_NAME,"w");
+    FILE *file = fopen(FILE_NAME, "w");
     if (file == NULL) {
         printf("Error opening file!\n");
         return;
@@ -35,9 +34,7 @@ void saveToFile(Student students[], int count) {
         fprintf(file, "Name: %s\n", students[i].name);
         fprintf(file, "Age: %d\n", students[i].age);
         fprintf(file, "Address: %s\n", students[i].address);
-      
     }
-      
     
     fclose(file);
     printf("\nData saved successfully to %s!\n", FILE_NAME);
@@ -70,15 +67,14 @@ int loadFromFile(Student students[]) {
                 sscanf(line, "Roll Number: %d", &students[i].roll_no);
                 
                 fgets(line, sizeof(line), file);
-                sscanf(line, "Name: %[^\n]", students[i].name);
+                sscanf(line, "Name: %s", students[i].name);
                 
                 fgets(line, sizeof(line), file);
                 sscanf(line, "Age: %d", &students[i].age);
                 
                 fgets(line, sizeof(line), file);
-                sscanf(line, "Address: %[^\n]", students[i].address);
+                sscanf(line, "Address: %s", students[i].address);
                 
-               
                 // Skip to next student
                 while (fgets(line, sizeof(line), file) && !strstr(line, "---")) {}
                 break;
@@ -97,11 +93,8 @@ void displayStudent(Student student) {
     printf("Name: %s\n", student.name);
     printf("Age: %d\n", student.age);
     printf("Address: %s\n", student.address);
-  
 }
-   
-    
-  
+
 // This function shows information about all students
 void displayAllStudents(Student students[], int count) {
     if (count == 0) {
@@ -135,7 +128,7 @@ int main() {
         
         // Get student's basic information
         printf("Name: ");
-        scanf(" %s\n", students[count].name);
+        scanf(" %49[^\n]", students[count].name);
         
         printf("Roll No: ");
         scanf("%d", &students[count].roll_no);
@@ -144,9 +137,7 @@ int main() {
         scanf("%d", &students[count].age);
         
         printf("Address: ");
-        scanf(" %s \n", students[count].address);
-
-      
+        scanf(" %99[^\n]", students[count].address);
 
         // Save the new student
         count++;
